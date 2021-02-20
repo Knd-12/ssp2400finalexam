@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
 
 
 /*  =======================
-
+                                                                                
     Get All students Of Single courses
 
     ======================
@@ -60,7 +60,7 @@ if ($result->num_rows > 0) {
 echo '<strong>Students:</strong><br>';
 
 
-$sql = "SELECT students.id, students.name AS students_name, students_courses.courses_id FROM students_courses RIGHT JOIN students_id ON students.id = students_courses.students_id WHERE students_courses.courses_id = '$courses_id'";
+$sql = "SELECT students.id, students.name AS students_name, students_courses.course_id FROM students RIGHT JOIN students_courses ON students.id = students_courses.student_id WHERE students_courses.course_id = '$courses_id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -1,5 +1,4 @@
 
-
 <?php
 $dbcreds = parse_ini_file("env.ini" , true);
 
@@ -24,3 +23,4 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 $conn->close();
+
